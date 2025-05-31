@@ -1,0 +1,26 @@
+import com.kms.katalon.core.main.TestCaseMain
+import com.kms.katalon.core.logging.KeywordLogger
+import com.kms.katalon.core.testcase.TestCaseBinding
+import com.kms.katalon.core.driver.internal.DriverCleanerCollector
+import com.kms.katalon.core.model.FailureHandling
+import com.kms.katalon.core.configuration.RunConfiguration
+import com.kms.katalon.core.webui.contribution.WebUiDriverCleaner
+import com.kms.katalon.core.mobile.contribution.MobileDriverCleaner
+import com.kms.katalon.core.cucumber.keyword.internal.CucumberDriverCleaner
+import com.kms.katalon.core.windows.keyword.contribution.WindowsDriverCleaner
+import com.kms.katalon.core.testng.keyword.internal.TestNGDriverCleaner
+
+
+DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.webui.contribution.WebUiDriverCleaner())
+DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.mobile.contribution.MobileDriverCleaner())
+DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.cucumber.keyword.internal.CucumberDriverCleaner())
+DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.windows.keyword.contribution.WindowsDriverCleaner())
+DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.testng.keyword.internal.TestNGDriverCleaner())
+
+
+RunConfiguration.setExecutionSettingFile('C:\\Users\\PVT\\AppData\\Local\\Temp\\Katalon\\Test Cases\\Xem danh s\u00E1ch \u0111\u01A1n h\u00E0ng\\TC_10\\20230914_214511\\execution.properties')
+
+TestCaseMain.beforeStart()
+
+        TestCaseMain.runTestCase('Test Cases/Xem danh sách đơn hàng/TC_10', new TestCaseBinding('Test Cases/Xem danh sách đơn hàng/TC_10',[:]), FailureHandling.STOP_ON_FAILURE , false)
+    
